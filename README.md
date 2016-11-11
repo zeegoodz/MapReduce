@@ -1,3 +1,8 @@
+#Port numbers:
+Zach:40800 or 43100
+
+Kyle: 40500 or 42800
+
 #Misc before running scripts:
   $ export PATH=~/hadoop-install/hadoop/bin
   
