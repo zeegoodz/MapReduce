@@ -1,5 +1,6 @@
 #Misc before running scripts:
   $ export PATH=~/hadoop-install/hadoop/bin
+  
   $ export PATH=~/hadoop-install/hadoop/sbin
   
 #Run scripts:
