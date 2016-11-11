@@ -34,6 +34,7 @@ Kyle: 40500 or 42800
 #After done running 
 
   1. Save ouptut file from the HDFS because it will be erased when the file system is shut down
+  
         $ bin/hadoop fs -get output output
         
         $ bin/hadoop fs -rm -r output
