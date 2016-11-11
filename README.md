@@ -1,5 +1,5 @@
 #Port numbers:
-Zach:40800 or 43100
+Zach: 40800 or 43100
 
 Kyle: 40500 or 42800
 
