@@ -10,7 +10,7 @@ Kyle: 40500 or 42800
   
 #Run scripts:
   1. $ ./setmode.sh distributed
-  2. $ ./cluster-pickports.sh <your ports>
+  2. $ ./cluster-pickports.sh [your ports]
   3. $ Open up another session tab, pbsget nodes
   4. $ ./create-hadoop-cluster.sh
 
@@ -27,7 +27,7 @@ Kyle: 40500 or 42800
 
   $ jar cf wc.jar WordCount*.class
   
-  $ hadoop jar <path to jar file> [main class] [args]
+  $ hadoop jar [path to jar file] [main class] [args]
   
 #After done running 
 
