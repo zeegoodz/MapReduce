@@ -29,6 +29,8 @@ Kyle: 40500 or 42800
   
   $ hadoop jar [path to jar file] [main class] [args]
   
+  Example: $ hadoop jar InvertedIndex.jar InvertedIndex input output
+  
 #After done running 
 
   1. Save ouptut file from the HDFS because it will be erased when the file system is shut down
