@@ -1,7 +1,28 @@
-Compile WordCount.java and create a jar:
+#Misc before running scripts:
+  $ export PATH=~/hadoop-install/hadoop/bin
+  $ export PATH=~/hadoop-install/hadoop/sbin
+  
+#Run scripts:
+  1. $ ./setmode.sh distributed
+  2. $ ./cluster-pickports.sh <your ports>
+  3. $ Open up another session tab, pbsget nodes
+  4. $ ./create-hadoop-cluster.sh
 
-$ export HADOOP_CLASSPATH=$JAVA_HOME/lib/tools.jar  //This should work on onyx
+#To check hdfs status through command line:
+  $ hdfs dfsadmin -report *make sure configured capacity is not 0gb.
+  
+#Making and running jars
 
-$ bin/hadoop com.sun.tools.javac.Main WordCount.java
+  Compile WordCount.java and create a jar:
 
-$ jar cf wc.jar WordCount*.class
+  $ export HADOOP_CLASSPATH=$JAVA_HOME/lib/tools.jar  //This should work on onyx
+
+  $ bin/hadoop com.sun.tools.javac.Main WordCount.java  
+
+  $ jar cf wc.jar WordCount*.class
+  
+#After done running 
+
+  1. Save ouptut file from the HDFS because it will be erased when the file system is shut down
+  2. $ cluster-remove.sh
+  
