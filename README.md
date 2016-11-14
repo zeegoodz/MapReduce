@@ -31,6 +31,8 @@ Kyle: 40500 or 42800
   
   $ hdfs fs -put [local_file_path] [hdfs file path]
   
+  Example: hdfs dfs -put ~/Documents/cs430/p3/input/ /input/
+  
   $ hadoop jar [path to jar file] [main class] [args]
   
   Example: $ hadoop jar InvertedIndex.jar InvertedIndex input output
