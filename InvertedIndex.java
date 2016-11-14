@@ -29,7 +29,6 @@ public class InvertedIndex
 
 		private final static Text word = new Text();
 		private final static Text location = new Text();
-		//private final static MapWritable myMap = new MapWritable(); // <file, count>
 
 		public void map(LongWritable key, Text val, Context context)
 				throws IOException, InterruptedException
@@ -40,8 +39,6 @@ public class InvertedIndex
 			String fileName = fileSplit.getPath().getName();
 			location.set(fileName);
 
-			//myMap.put(new IntWritable(1), new Text(...));
-
 			/* Grab the whole text file in a line and loop through each word in the file: 
  			 * emit the word as the key and file location as the value */
 			String line = val.toString();
@@ -49,10 +46,6 @@ public class InvertedIndex
 					" , .;:\"&!?-_\n\t12345678910[]{}<>\\`~|=^()@#$%^*/+-");
 			while (itr.hasMoreTokens()) {
 				word.set(itr.nextToken());
-				//String tmp = itr.nextToken();
-				//word.set(tmp);
-				//If myMap.containsValue(itr.nextToken);
-				//
 				context.write(word, location);
 			}
 		}
@@ -62,17 +55,12 @@ public class InvertedIndex
 			Reducer<Text, Text, Text, Text>
 	{
 
-		//private final static MapWritable myMap = new MapWritable();
-		//private final static HashMap<Text,Text> myMap = new HashMap<Text,Text>(); //<file, count>
-		
 		public void reduce(Text key, Iterable<Text> values, Context context) //<key_in, value_in, key_out, value_out>
 				throws IOException, InterruptedException
 		{
 		
 			//private final static MapWritable myMap = new MapWritable();
 			HashMap<String,String> myMap = new HashMap<String,String>(); //<file, count>
-
-			//myMap.put(new IntWritable(1), new Text(...));
 
 			/* Loop through each file that the word has appeared */
 			boolean first = true;
@@ -105,12 +93,6 @@ public class InvertedIndex
 				toReturn.append(", ");
     		}	
 
-			//toReturn.append(String.valueOf(count));
-			//toReturn.append(" ");
-			//toReturn.append(filename);
-			//toReturn.append(", ");
-			//myMap.put(new Text(String.valueOf(count)), new);
- 
 			context.write(key, new Text(toReturn.toString()));
 		}
 	}
