@@ -23,9 +23,9 @@ Kyle: 40500 or 42800
 
   $ export HADOOP_CLASSPATH=$JAVA_HOME/lib/tools.jar  //This should work on onyx
 
-  $ bin/hadoop com.sun.tools.javac.Main WordCount.java  
+  $ bin/hadoop com.sun.tools.javac.Main InvertedIndex.java  
 
-  $ jar cf wc.jar WordCount*.class
+  $ jar cf InvertedIndex.jar WordCount*.class
   
   $ hdfs dfs -mkdir /input
   
