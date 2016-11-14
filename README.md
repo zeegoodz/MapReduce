@@ -41,9 +41,9 @@ Kyle: 40500 or 42800
  
   1. Save ouptut file from the HDFS because it will be erased when the file system is shut down
   
-        $ bin/hadoop fs -get output output
+        $ bin/hadoop dfs -get output output
         
-        $ bin/hadoop fs -rm -r output
+        $ bin/hadoop dfs -rm -r output
         
         $ cat part-r-00000 | sort -k 2,2 -rn | sed 10q
   2. $ cluster-remove.sh
