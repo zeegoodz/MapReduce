@@ -31,19 +31,20 @@ Kyle: 40500 or 42800
   
   $ hdfs fs -put [local_file_path] [hdfs file path]
   
-  Example: hdfs dfs -put ~/Documents/cs430/p3/input/ /input/
+  Example: hdfs dfs -put ~/Documents/cs430/p3/input/Alice-in-Wonderland.txt /input
   
   $ hadoop jar [path to jar file] [main class] [args]
   
-  Example: $ hadoop jar InvertedIndex.jar InvertedIndex input output
+  Example: $ hadoop jar InvertedIndex.jar InvertedIndex /input output
   
 #After done running 
-  1. To look at the output do something like: $ cat part-r-00000 | sort -k 2,2 -rn | sed 10q
  
-  2. Save ouptut file from the HDFS because it will be erased when the file system is shut down
+  1. Save ouptut file from the HDFS because it will be erased when the file system is shut down
   
         $ bin/hadoop fs -get output output
         
         $ bin/hadoop fs -rm -r output
-  3. $ cluster-remove.sh
+        
+        $ cat part-r-00000 | sort -k 2,2 -rn | sed 10q
+  2. $ cluster-remove.sh
   
