@@ -27,6 +27,10 @@ Kyle: 40500 or 42800
 
   $ jar cf wc.jar WordCount*.class
   
+  $ hdfs dfs -mkdir /input
+  
+  $ hdfs fs -put [local_file_path] [hdfs file path]
+  
   $ hadoop jar [path to jar file] [main class] [args]
   
   Example: $ hadoop jar InvertedIndex.jar InvertedIndex input output
