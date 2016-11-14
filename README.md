@@ -32,7 +32,7 @@ Kyle: 40500 or 42800
   Example: $ hadoop jar InvertedIndex.jar InvertedIndex input output
   
 #After done running 
-  1. To look at the output do something like: $ cat part-r-0000 | sort -k 2,2 -rn | sed 10q
+  1. To look at the output do something like: $ cat part-r-00000 | sort -k 2,2 -rn | sed 10q
  
   2. Save ouptut file from the HDFS because it will be erased when the file system is shut down
   
