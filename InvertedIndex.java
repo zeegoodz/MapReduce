@@ -15,8 +15,8 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
 /**
  * Builds an inverted index: each word followed by files it was found in.
- * 
- * 
+ *
+ *
  */
 public class InvertedIndex
 {
@@ -53,16 +53,20 @@ public class InvertedIndex
 		public void reduce(Text key, Iterable<Text> values, Context context)
 				throws IOException, InterruptedException
 		{
-
+			Integer count = 0;
 			boolean first = true;
 			Iterator<Text> itr = values.iterator();
 			StringBuilder toReturn = new StringBuilder();
+			String file = (itr.next().toString());
+			count++;
 			while (itr.hasNext()) {
-				if (!first)
-					toReturn.append(", ");
-				first = false;
-				toReturn.append(itr.next().toString());
+				count++;
+				itr.next();
+				//toReturn.append(itr.next().toString());/
 			}
+			toReturn.append(count.toString());
+			toReturn.append(" ");
+			toReturn.append(file);
 
 			context.write(key, new Text(toReturn.toString()));
 		}
@@ -90,3 +94,4 @@ public class InvertedIndex
 	}
 
 }
+

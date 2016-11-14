@@ -1,0 +1,17 @@
+1. Download install binary Hadoop on Onyx in a ~/tools directory
+2. ~/hadoop_install folder ln -s tools/hadoop-2.7.3 hadoop_install (simLink to /tools/hadoop)
+3. add hadoop bin and sbin to your path environment variable
+4. export PATH=$PATH:~/hadoop_install/bin 
+5. make sure everything's good and then add it to bash.rc file
+6. Go to CS430-Resources/Hadoop/local_scripts, do a git pull.
+7. run setmode.sh
+8. run cluster-pickports.sh <port number>
+9. netstat -an | less (use for debug)
+10. pbsget nodes in separate window 
+11. run create-hadoop-cluster.sh
+12. check exceptions top to bottom --> xercees is an xml config file issue
+13. hdfs dfsadmin -report  ***super handy for debug***
+14. copy output out of file system to save it
+15. run cluster-remove.sh
+16. close pbsget  
+ 
