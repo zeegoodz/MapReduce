@@ -29,7 +29,7 @@ Kyle: 40500 or 42800
   
   $ hdfs dfs -mkdir /input
   
-  $ hdfs fs -put [local_file_path] [hdfs file path]
+  $ hdfs dfs -put [local_file_path] [hdfs file path]
   
   Example: hdfs dfs -put ~/Documents/cs430/p3/input/Alice-in-Wonderland.txt /input
   
