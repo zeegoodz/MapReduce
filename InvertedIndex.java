@@ -134,11 +134,6 @@ public class InvertedIndex
 
 	public static HashMap<String, Integer> sortMap(HashMap<String, Integer> map){
 		HashMap<String, Integer> sortedMap = new LinkedHashMap<String,Integer>();
-	//	ArrayList<String> keys = new ArrayList<>(map.keySet());
-	//	ArrayList<String> values = new ArrayList<>(map.values());
-
-	//	Collections.sort(values);
-	//	Collections.sort(keys);
 
 		Set<Entry<String, Integer>> mapEntries = map.entrySet();
 
@@ -154,27 +149,7 @@ public class InvertedIndex
 		for(Entry<String,Integer> entry : list){
 			sortedMap.put(entry.getKey(), entry.getValue());
 		}
-/*
 
-
-			Iterator<String> valitr = values.iterator();
-			while (valitr.hasNext()){
-				String val = valitr.next();
-
-				Iterator<String> keyitr = keys.iterator();
-
-				while (keyitr.hasNext()){
-					String key = keyitr.next();
-					String temp1 = map.get(key);
-					String temp2 = val;
-
-					if(temp1.equals(temp2)){
-						keyitr.remove();
-						sortedMap.put(key, val);
-						break;
-					}
-				}
-			} */
 		return sortedMap;
 	}
 
