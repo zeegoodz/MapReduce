@@ -5,6 +5,9 @@
 
 ##Discussion
 
+First off, we did not develop in Eclipse. We developed strictly using Bash and Vim,
+code our program.
+
 This project was fairly straight forward once we grasped the concept of Mapping
 and Reducing within InvertedIndex.java. We didn't do anything to the mapper class,
 instead we used a key value setup where the value was a string of the filename and
